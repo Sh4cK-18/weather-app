@@ -8,7 +8,8 @@
       class="mb-2 text-sm font-medium text-gray-900 sr-only"
       >Search</label
     >
-    <div class="relative">
+    <div class="flex items-center justify-center">
+    <div class="relative ">
       <div
         class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none"
       >
@@ -31,16 +32,17 @@
       <input
         type="search"
         id="default-search"
-        class="block w-full p-4 ps-10 text-xl text-white border border-gray-300 placeholder:text-white rounded-2xl bg-transparent focus:ring-cyan-500 focus:border-cyan-500"
+        class="block w-[300px] md:w-[700px] p-4 ps-10 text-xl text-white border border-gray-300 placeholder:text-white rounded-2xl bg-transparent focus:ring-cyan-500 focus:border-cyan-500"
         placeholder="Search for a city"
         required
         v-model="city"
       />
     </div>
+  </div>
   </form>
 
   <div
-     class="w-[800px] h-[350px] p-8 mt-20 box mx-auto rounded-lg bg-transparent border-[4px] border-cyan-500 dark:bg-gray-900 dark:text-gray-100 hover:cursor-pointer hover:shadow-xl hover:shadow-cyan-500 hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none transition duration-150 easy-in-out"
+     class="w-[320px] md:w-[900px] h-[400px] md:h-[350px] p-8 mt-20 box mx-auto rounded-lg bg-transparent border-[4px] shadow-xl shadow-cyan-600 border-cyan-500 dark:bg-gray-900 dark:text-gray-100 hover:cursor-pointer  hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none transition duration-150 easy-in-out"
   >
     <div class="flex justify-between space-x-8">
       <div class="flex flex-col items-center">
@@ -49,7 +51,7 @@
           class="w-[90px] h-[90px]"
           alt="Weather icon"
         />
-        <h1 class="text-xl font-semibold text-white">
+        <h1 class="text-lg md:text-2xl text-center font-semibold text-white">
           {{
             weatherData.location
               ? `${weatherData.location.name}, ${weatherData.location.country}`
@@ -57,18 +59,18 @@
           }}
         </h1>
       </div>
-      <span class="font-bold text-8xl text-white"
+      <span class="font-bold text-4xl md:text-8xl text-white"
         >{{ weatherData.current ? weatherData.current.temp_c : " " }}°C</span
       >
     </div>
     <div class="flex justify-between mt-20 space-x-4 dark:text-gray-400">
-      <div class="flex flex-col">
+      <div class="flex flex-col items-center justify-center">
         <div>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             class="icon icon-tabler icon-tabler-wind text-white"
-            width="24"
-            height="24"
+            width="30"
+            height="30"
             viewBox="0 0 24 24"
             stroke-width="2"
             stroke="currentColor"
@@ -82,19 +84,20 @@
             <path d="M4 16h5.5a2.5 2.5 0 1 1 -2.34 3.24" />
           </svg>
         </div>
-        <div>
-          <h2 class="text-xl text-white">
-            {{ weatherData.current ? weatherData.current.wind_kph : " " }}
+        <div class="flex flex-col items-center justify-center">
+          <h2 class="text-lg md:text-2xl text-white">
+            {{ weatherData.current ? weatherData.current.wind_kph : " " }} km/h
           </h2>
+          <h2 class="text-white text-lg md:text-2xl">Wind</h2>
         </div>
       </div>
-      <div class="flex flex-col">
+      <div class="flex flex-col items-center justify-center">
         <div>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             class="icon icon-tabler icon-tabler-droplet-half-2-filled text-white"
-            width="24"
-            height="24"
+            width="30"
+            height="30"
             viewBox="0 0 24 24"
             stroke-width="2"
             stroke="currentColor"
@@ -110,19 +113,20 @@
             />
           </svg>
         </div>
-        <div>
-          <h2 class="text-xl text-white">
-            {{ weatherData.current ? weatherData.current.humidity : " " }}
+        <div class="flex flex-col items-center justify-center">
+          <h2 class="text-lg md:text-2xl text-white">
+            {{ weatherData.current ? weatherData.current.humidity : " " }}%
           </h2>
+          <h2 class="text-white text-lg md:text-2xl">Humidity</h2>
         </div>
       </div>
-      <div class="flex flex-col">
+      <div class="flex flex-col items-center justify-center">
         <div>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             class="icon icon-tabler icon-tabler-uv-index text-white"
-            width="24"
-            height="24"
+            width="30"
+            height="30"
             viewBox="0 0 24 24"
             stroke-width="2"
             stroke="currentColor"
@@ -139,10 +143,11 @@
             <path d="M6 16v3a2 2 0 1 0 4 0v-3" />
           </svg>
         </div>
-        <div>
-          <h2 class="text-xl text-white">
+        <div class="flex flex-col items-center justify-center">
+          <h2 class="text-lg md:text-2xl text-white">
             {{ weatherData.current ? weatherData.current.pressure_in : " " }}
           </h2>
+          <h2 class="text-white text-lg md:text-2xl">Pressure</h2>
         </div>
       </div>
     </div>
