@@ -42,7 +42,7 @@
   </form>
 
   <div
-     class="w-[320px] md:w-[900px] h-[400px] md:h-[350px] p-8 mt-20 box mx-auto rounded-lg bg-transparent border-[4px] shadow-xl shadow-cyan-600 border-cyan-500 dark:bg-gray-900 dark:text-gray-100 hover:cursor-pointer  hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none transition duration-150 easy-in-out"
+     class="w-[320px] md:w-[900px] h-[400px] md:h-[350px] p-8 mt-14 box mx-auto rounded-lg bg-transparent border-[4px] shadow-xl shadow-cyan-600 border-cyan-500 dark:bg-gray-900 dark:text-gray-100 hover:cursor-pointer  hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none transition duration-150 easy-in-out"
   >
     <div class="flex justify-between space-x-8">
       <div class="flex flex-col items-center">
@@ -59,7 +59,7 @@
           }}
         </h1>
       </div>
-      <span class="font-bold text-4xl md:text-8xl text-white"
+      <span class="font-bold text-4xl md:text-8xl text-white flex items-center "
         >{{ weatherData.current ? weatherData.current.temp_c : " " }}°C</span
       >
     </div>
@@ -85,10 +85,10 @@
           </svg>
         </div>
         <div class="flex flex-col items-center justify-center">
-          <h2 class="text-lg md:text-2xl text-white">
+          <h2 class="text-md md:text-xl text-white text-center">
             {{ weatherData.current ? weatherData.current.wind_kph : " " }} km/h
           </h2>
-          <h2 class="text-white text-lg md:text-2xl">Wind</h2>
+          <h2 class="text-white text-md md:text-xl">Wind</h2>
         </div>
       </div>
       <div class="flex flex-col items-center justify-center">
@@ -114,10 +114,10 @@
           </svg>
         </div>
         <div class="flex flex-col items-center justify-center">
-          <h2 class="text-lg md:text-2xl text-white">
+          <h2 class="text-md md:text-xl text-white">
             {{ weatherData.current ? weatherData.current.humidity : " " }}%
           </h2>
-          <h2 class="text-white text-lg md:text-2xl">Humidity</h2>
+          <h2 class="text-white text-md md:text-xl">Humidity</h2>
         </div>
       </div>
       <div class="flex flex-col items-center justify-center">
@@ -144,10 +144,10 @@
           </svg>
         </div>
         <div class="flex flex-col items-center justify-center">
-          <h2 class="text-lg md:text-2xl text-white">
+          <h2 class="text-md md:text-xl text-white">
             {{ weatherData.current ? weatherData.current.pressure_in : " " }}
           </h2>
-          <h2 class="text-white text-lg md:text-2xl">Pressure</h2>
+          <h2 class="text-white text-md md:text-xl">Pressure</h2>
         </div>
       </div>
     </div>
