@@ -2,3 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+#border-rgb{
+    border: 4px solid;
+    animation: rainbow 5s ease-in-out infinite;
+}
+
+@keyframes rainbow {
+    0% {border-color: red;}
+    14% {border-color: orange;}
+    28% {border-color: yellow;}
+    42% {border-color: lime;}
+    57% {border-color: blue;}
+    71% {border-color: indigo;}
+    85% {border-color: violet;}
+    100% {border-color: red;}
+}

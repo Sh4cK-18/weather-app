@@ -19,6 +19,8 @@
     "vue-router": "^4.2.5"
   },
   "dependencies": {
-    "flowbite": "^2.2.1"
+    "axios": "^1.6.3",
+    "flowbite": "^2.2.1",
+    "particles.js": "^2.0.0"
   }
 }
