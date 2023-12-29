@@ -165,7 +165,7 @@ let weatherData = ref({});
 const api_base = config.public.api_key;
 
 const searchCity = async () => {
-  const url = `http://api.weatherapi.com/v1/current.json?key=${api_base}&q=${city.value}&aqi=no`;
+  const url = `https://api.weatherapi.com/v1/current.json?key=${api_base}&q=${city.value}&aqi=no`;
 
   try {
     const response = await axios.get(url);
