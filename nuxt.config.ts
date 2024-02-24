@@ -13,7 +13,7 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     public: {
-     api_key : process.env.NUXT_API_KEY,
+      api_key : process.env.NUXT_API_KEY,
     },
   },
 })

@@ -1,5 +1,5 @@
 <template>
-  <div class=" w-full h-screen">
+  <div class=" w-full h-screen bg-black">
     <div class="w-full flex items-center justify-center">
       <div class="w-full p-5 m-8">
         <Weather />
